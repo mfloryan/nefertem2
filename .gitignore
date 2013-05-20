@@ -1,4 +1,5 @@
 .idea/
 *.iml
 .DS_Store
-less/**/*.css
+less/**/*\.css
+less/*\.css
