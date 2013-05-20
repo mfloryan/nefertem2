@@ -1,6 +1,6 @@
 <aside id="logo" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
-    <a href="<?php echo get_home_url(); ?>"><h1><?php bloginfo('name'); ?></h1></a>
-    <div id="tagline"><?php bloginfo('description'); ?></div>
+    <h1><a href="<?php echo get_home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+    <h3 id="tagline"><?php bloginfo('description'); ?></h3>
 </aside>
 
 <nav id="icons">

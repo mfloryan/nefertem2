@@ -77,28 +77,52 @@ Copyright (C) 2012 Marcin Floryan http://marcin.floryan.pl/
 // Utility classes
 @import "bootstrap/utilities"; // Has to be last to override when necessary
 
-//@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700,800);
-//@import url(http://fonts.googleapis.com/css?family=Monda:400,700|Open+Sans:800,300);
+aside {
 
+  &#logo {
 
+    padding: 20px 0;
+    color: @colour-blue;
 
-#menu {
-//  background-color: #f5f5f5;
-//  border: solid 1px silver;
-//  .border-radius(5px);
-  padding: 5px 0;
-}
+    a {
+      text-decoration: none;
+    }
 
-#icons {
+    h1 {
+      font-size: 22px;
+      line-height: 22px;
+      color: @colour-aube;
+      margin: 0;
+    }
 
-  font-size: 18px;
-
-  a {
-    color: @colour-aube;
-    text-decoration: none;
-    padding: 5px;
+    h3 {
+      font-size: @baseFontSize;
+      line-height: @baseLineHeight;
+      margin: 0;
+      font-weight: 300;
+    }
   }
 }
+
+nav {
+  &#icons {
+
+    font-size: 28px;
+
+    a {
+      padding: 0 8px;
+      color: @colour-aube;
+      text-decoration: none;
+      &:hover {
+        color: @colour-purple;
+//        .border-radius(5px);
+//        background-color: @colour-aube;
+      }
+    }
+  }
+}
+
+
 
 p {
   margin: 0 0 20px;
@@ -116,17 +140,13 @@ blockquote {
   border-left-color: @colour-purple;
 }
 
-#logo {
-  h1 {
-    font-size: 22px;
-    color: @colour-aube;
-    font-weight: 700;
-  }
-}
 
 
 
 article {
+
+  padding: 20px 0;
+
   a {
     background-color: lighten(@colour-yellow, 20%);
     .border-radius(@baseBorderRadius);
