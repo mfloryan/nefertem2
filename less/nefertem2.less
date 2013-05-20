@@ -1,0 +1,217 @@
+/*
+Theme Name: Nefertem 2
+Theme URI: https://github.com/mfloryan/nefertem2
+Version: 1.0
+Author: Marcin Floryan
+Author URI: http://marcin.floryan.pl/
+Tags: twitter-bootstrap
+License: GNU General Public License
+License URI: LICENSE
+Description: A WordPress theme designed for http://marcin.floryan.pl/ based on twitter bootstrap
+
+Copyright (C) 2012 Marcin Floryan http://marcin.floryan.pl/
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+*/
+/*!
+ * Bootstrap v2.2.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world @twitter by @mdo and @fat.
+ */
+
+//mfx colours
+@colour-purple: #82005a;
+@colour-yellow: #ffff55;
+@colour-blue:   #28233c;
+@colour-aube:   #3c233a;
+
+// CSS Reset
+@import "bootstrap/reset";
+
+// Core variables and mixins
+@import "bootstrap/variables"; // Modify this for custom colors, font-sizes, etc
+@import "overrides/variables";
+@import "bootstrap/mixins";
+
+// Grid system and page structure
+@import "bootstrap/scaffolding";
+@import "bootstrap/grid";
+@import "bootstrap/layouts";
+
+// Base CSS
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/forms";
+@import "bootstrap/tables";
+
+// Components: common
+//@import "awesome/font-awesome";
+@import "bootstrap/dropdowns";
+@import "bootstrap/wells";
+@import "bootstrap/component-animations";
+@import "bootstrap/close";
+
+// Components: Buttons & Alerts
+@import "bootstrap/buttons";
+@import "bootstrap/button-groups";
+@import "bootstrap/alerts"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "bootstrap/navs";
+@import "bootstrap/tooltip";
+
+// Utility classes
+@import "bootstrap/utilities"; // Has to be last to override when necessary
+
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,700,800);
+//@import url(http://fonts.googleapis.com/css?family=Monda:400,700|Open+Sans:800,300);
+
+
+
+#menu {
+//  background-color: #f5f5f5;
+//  border: solid 1px silver;
+//  .border-radius(5px);
+  padding: 5px 0;
+}
+
+#icons {
+
+  font-size: 18px;
+
+  a {
+    color: @colour-aube;
+    text-decoration: none;
+    padding: 5px;
+  }
+}
+
+p {
+  margin: 0 0 20px;
+
+  &.tldr {
+    padding: 5px;
+    .border-radius(@borderRadiusLarge);
+    border: 1px dotted;
+  }
+}
+
+
+blockquote {
+  color: @colour-purple;
+  border-left-color: @colour-purple;
+}
+
+#logo {
+  h1 {
+    font-size: 22px;
+    color: @colour-aube;
+    font-weight: 700;
+  }
+}
+
+
+
+article {
+  a {
+    background-color: lighten(@colour-yellow, 20%);
+    .border-radius(@baseBorderRadius);
+    &:hover {
+      background: none;
+    }
+  }
+
+  .tags {
+    float:right;
+    font-family: @headingsFontFamily;
+    font-size: 12px;
+    color: @grayLight;
+    font-weight: 300;
+    a {
+      padding: 0 5px;
+      background: none;
+      color: @grayLight;
+    }
+  }
+
+  h1, h2, h3, h4, h5 {
+    clear: both;
+    a {
+      background: none;
+      color: @headingsColor;
+      &:hover {
+        color: @headingsColor;
+        text-decoration: none;
+      }
+    }
+  }
+
+  time {
+    font-family: @headingsFontFamily;
+    color: @grayLight;
+    font-weight: 300;
+  }
+}
+
+.nobr {
+  white-space: nowrap;
+}
+
+aside.social {
+  font-family: @headingsFontFamily;
+  font-weight: 300;
+
+  &#follow {
+    i {
+      font-size: 28px;
+    }
+  }
+
+  &#share {
+    i {
+      font-size: 24px;
+      padding: 0 5px;
+    }
+  }
+
+}
+
+@import 'wordpress';
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "bootstrap/responsive-utilities";
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+@import "bootstrap/responsive-1200px-min";
+
+// Tablets to regular desktops
+@import "bootstrap/responsive-768px-979px";
+
+// Phones to portrait tablets and narrow desktops
+@import "bootstrap/responsive-767px-max";
+@import "responsive";
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "bootstrap/responsive-navbar";
